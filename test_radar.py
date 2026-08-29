@@ -44,3 +44,15 @@ def test_看過的新聞不再出現():
     new_items = pick_new(items, seen)
     assert len(new_items) == 1
     assert new_items[0]["title"] == "沒看過的"
+
+
+# 驗連結：組出來的訊息裡有沒有包含新聞的連結。
+def test_訊息包含新聞連結():
+    items = [
+        {"title": "測試新聞一", "link": "https://example.com/1"},
+        {"title": "測試新聞二", "link": "https://example.com/2"},
+    ]
+    message = build_message("測試主題", items)
+    assert "https://example.com/1" in message
+    assert "https://example.com/2" in message
+
