@@ -114,7 +114,7 @@ def build_flex_message(items):
                     },
                     {
                         "type": "text",
-                        "text": "發現 " + str(len(picked)) + " 則新消息",
+                        "text": "發現 " + str(len(picked)) + " 則新消息 (from github-[news-radar-v2])",
                         "size": "sm",
                         "color": "#666666",
                         "margin": "sm"
